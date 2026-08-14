@@ -1,57 +1,57 @@
-# Zhan-Zhan WeChat Moments Caption Skill
+# 詹詹朋友圈文案
 
-Turn the light, weather, colors, and subtle movement in travel photos into vivid Chinese WeChat Moments captions with room for imagination.
+把旅行照片里的光线、天气、色彩与细微动态，写成一条有画面感、有留白的中文朋友圈文案。
 
-`zhan-zhan-moments-skill` is a creative Skill for Codex. It uses real visual details and the user’s own experience to produce concise, restrained captions that are ready to publish. It avoids travel logs, attraction guides, and generic inspirational language.
+`zhan-zhan-moments-skill` 是一个面向 Codex 的创作 Skill。它从真实照片和用户提供的经历出发，生成简短、克制且可以直接发布的朋友圈正文，不写成行程记录、景点介绍或空泛的“治愈系”套话。
 
-## Use Cases
+## 适用场景
 
-- Travel, landscape, city, and nature photography
-- Architecture, old towns, bookstores, exhibitions, and cultural spaces
-- Sunsets, night scenes, rain, window views, and weather photography
-- Everyday scenes and cohesive photo grids
-- Refining or shortening an existing WeChat Moments caption
+- 旅行、山水、城市与风景照片
+- 建筑、老城、书局、展馆与文化空间
+- 日落、夜色、雨景、窗景与天气随拍
+- 日常小景和氛围明确的九宫格
+- 已有朋友圈文案的精简与风格润色
 
-This Skill is not intended for travel guides, factual research, marketing copy, or photo-by-photo descriptions.
+本 Skill 不以旅游攻略、事实查询、营销推广或逐张看图说明为目标。
 
-## Core Capabilities
+## 核心能力
 
-- **Scene extraction**: Identifies the subject, lighting, time, colors, textures, movement, and emotional direction.
-- **Adaptive length**: Uses short lines for a strong single image and short prose for photo collections or cultural settings.
-- **Three-stage composition**: Enters the scene, brings it to life, and closes with a restrained emotional aftertaste.
-- **Original imagery**: Creates metaphors and personification from the current photos instead of reusing signature lines from the source material.
-- **Factual grounding**: Does not invent locations, history, relationships, or experiences the user has not provided.
-- **Anti-template review**: Filters out travel logs, slogans, excessive ornamentation, and repetitive sentence patterns.
+- **看图提取场景**：识别主体、光线、时间、色彩、质地、动态与情绪方向。
+- **自适应篇幅**：单张强画面使用短句，照片组和文化场景使用短篇散文。
+- **三步写作推进**：进入画面，让景物动起来，再留下克制的情绪余韵。
+- **原创意象**：根据本次照片创造比喻和拟人，不复用素材中的标志性句子。
+- **事实约束**：不虚构地名、历史、人物关系或用户没有提供的经历。
+- **反模板检查**：过滤流水账、口号、辞藻堆砌和机械重复的句式。
 
-## How It Works
+## 工作方式
 
 ```text
-Photos and context
-        ↓
-Build a scene card
-        ↓
-Choose length and writing mode
-        ↓
-Scene → Movement → Aftertaste
-        ↓
-Check originality and factual accuracy
-        ↓
-One publish-ready caption
+图片与背景
+    ↓
+提取场景卡
+    ↓
+选择篇幅与写作模式
+    ↓
+画面 → 动态 → 余韵
+    ↓
+原创性与事实检查
+    ↓
+一条可直接发布的正文
 ```
 
-If the photos or description do not provide enough usable detail, the Skill briefly asks about the location or subject, time or lighting, and intended emotion. When the context is sufficient, it writes the caption immediately.
+当图片或描述缺少可写细节时，Skill 会简短询问地点或主体、时间或光线，以及用户想表达的情绪；信息充分时则直接生成。
 
-## Quick Start
+## 快速开始
 
-### 1. Install
+### 1. 安装
 
-Download the repository, preserve its directory structure, and place the project folder in your personal Codex Skills directory:
+下载仓库后，保留完整目录结构，将项目文件夹放入 Codex 的个人 Skills 目录：
 
 ```text
 ~/.codex/skills/zhan-zhan-moments-skill/
 ```
 
-The installed Skill should retain the following structure:
+安装后的关键文件应保持如下结构：
 
 ```text
 zhan-zhan-moments-skill/
@@ -62,83 +62,83 @@ zhan-zhan-moments-skill/
     └── style-observations.md
 ```
 
-### 2. Invoke
+### 2. 调用
 
-Upload your photos, provide any necessary context, and reference the Skill by name:
-
-```text
-$zhan-zhan-moments-skill Write a Chinese WeChat Moments caption for these travel photos.
-They were taken on an old street after the rain at dusk. Keep the mood quiet and restrained.
-```
-
-You can also make a natural-language request:
+上传照片并说明必要背景，然后在请求中使用 Skill 名称：
 
 ```text
-Use the Zhan-Zhan style to write a short Chinese caption for this sunset photo.
+$zhan-zhan-moments-skill 为这组旅行照片写一条朋友圈文案。
+地点是雨后的老街，拍摄于傍晚，希望安静一点。
 ```
 
-## Recommended Input
-
-For a caption that closely matches the photos, consider providing:
-
-- The approximate location or main subject
-- The time, weather, and lighting
-- What happened
-- The emotion you want to express
-- Information to include or avoid
-- Preferences for length, emoji, and number of alternatives
-
-You do not need to provide everything at once. When the image is sufficiently clear, the Skill writes directly from the visible scene.
-
-## Example
-
-Input:
+也可以直接提出自然语言请求：
 
 ```text
-A single photo. The rain has just stopped, and the evening streetlights are reflected on the stone road. Keep it quiet.
+请用詹詹的朋友圈风格，为这张日落照片配一条简短文案。
 ```
 
-Generated Chinese caption:
+## 输入建议
+
+为了让文案更贴合照片，可以提供以下信息：
+
+- 大致地点或画面主体
+- 拍摄时间、天气和光线
+- 发生了什么
+- 想表达的情绪
+- 希望保留或避免的信息
+- 长度、表情和备选数量偏好
+
+不必一次写全。图片本身足够明确时，Skill 会直接从画面落笔。
+
+## 示例
+
+输入：
+
+```text
+单张照片。雨刚停，傍晚的街灯映在石板路上，想写得安静一些。
+```
+
+输出：
 
 ```text
 雨把街灯轻轻铺在石板路上，暮色便有了温度。走到这里，脚步也不必太急~
 ```
 
-By default, the Skill returns one finished caption without labels such as “WeChat Moments caption:”. It provides alternatives or explains its writing choices only when explicitly requested.
+默认只输出一条完成稿，不添加“朋友圈文案：”等标签。用户明确要求时，才会提供多版备选或解释写作思路。
 
-## Design Principles
+## 设计原则
 
-1. **Photos before ornamentation**: Every caption must be grounded in at least one visible detail.
-2. **Emotion grows from the scene**: Do not force ordinary images into grand philosophical statements.
-3. **Literary does not mean overloaded**: Use only a small number of effective literary devices in each caption.
-4. **Learn the structure, not the wording**: Preserve the observational method while keeping every output original.
-5. **Let text sit beside the image**: Add emotional resonance instead of explaining what the photo already shows.
+1. **照片先于辞藻**：每条文案至少落在一个真实可见的细节上。
+2. **情绪来自画面**：不凭空拔高，不把普通景物硬写成宏大哲思。
+3. **文学感不等于堆词**：每条只使用少量有效修辞。
+4. **借鉴结构，不复制原句**：保留观察方式，同时确保输出原创。
+5. **文案与照片并列**：不重复解释照片，而是为画面补上一层余韵。
 
-See [SKILL.md](./SKILL.md) for the complete workflow and [style-observations.md](./references/style-observations.md) for a summary of the source material’s stylistic characteristics.
+完整规则见 [SKILL.md](./SKILL.md)，素材特征摘要见 [style-observations.md](./references/style-observations.md)。
 
-## Repository Structure
+## 项目结构
 
-- `SKILL.md`: Trigger conditions, writing workflow, output rules, and quality checks.
-- `agents/openai.yaml`: Display name, short description, and default invocation prompt.
-- `references/style-observations.md`: Stable stylistic traits and recommended length ranges extracted from the source material.
+- `SKILL.md`：触发条件、写作流程、输出规则和质量检查。
+- `agents/openai.yaml`：Skill 的展示名称、简介和默认调用提示。
+- `references/style-observations.md`：从素材中提炼的稳定风格特征与篇幅参考。
 
-## Privacy and Originality
+## 隐私与原创
 
-- Before uploading photos of people, make sure you have permission to use them and avoid sharing unnecessary sensitive information.
-- Review names, locations, dates, relationships, and other factual details before publishing generated content.
-- This project learns visual observation, language rhythm, and writing techniques. It does not encourage copying source sentences or publishing fabricated experiences as another real person.
+- 上传人物照片前，请确认拥有相应的使用权限，并避免提交不必要的敏感信息。
+- 生成结果应在发布前由用户自行核对人物、地点、日期和事实。
+- 本项目学习的是构图观察、语言节奏和写作方法，不鼓励逐句复制素材或冒充真实人物发布未经确认的经历。
 
-## Feedback and Contributions
+## 反馈与贡献
 
-Use GitHub Issues to report or suggest:
+欢迎通过 GitHub Issues 提交以下内容：
 
-- Captions that do not match the photos or feel overly formulaic
-- New photographic scenarios and edge cases
-- More precise negative examples and quality checks
-- Improvements to length, tone, and originality
+- 与照片不匹配或过于模板化的输出
+- 新的照片场景与边界案例
+- 更准确的反例和质量检查规则
+- 对篇幅、语气和原创性的改进建议
 
-When changing the writing rules, test short captions, photo grids, cultural spaces, night scenes, and everyday photography to avoid overfitting to a single example.
+修改写作规则时，请同时检查短句、九宫格、文化空间、夜景和日常小景等不同场景，避免只针对单个示例过拟合。
 
-## License
+## 许可证
 
-Rights to use, modify, and distribute this project are governed by the repository’s `LICENSE` file. If no license is provided, all rights are reserved by default.
+使用、修改和分发权限以仓库中的 `LICENSE` 文件为准。若仓库未提供许可证，则默认保留所有权利。
