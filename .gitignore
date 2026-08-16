@@ -1,0 +1,6 @@
+# macOS
+.DS_Store
+
+# 本地 Agent 工作文件（不进入共享仓库，不 merge 到 main）
+AGENTS.md
+PROGRESS.md
